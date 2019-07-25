@@ -1,0 +1,37 @@
+body {
+    margin: 0, auto;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+button {
+    margin-top: 10px;
+}
+
+.start-quiz {
+    box-sizing: border-box;
+    background-color: lightgray;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.question {
+    box-sizing: border-box;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+p {
+    box-sizing: border-box;
+    background-color: white;
+    color:black;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.end-quiz {
+    box-sizing: border-box;
+    background-color: lightgray;
+    color: white;
+    margin-bottom: 20px;
+}
