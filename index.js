@@ -74,11 +74,11 @@ const myQuestions = [
     question: "What is the princesses name in, “Sleeping Beauty”?",
     answers: {
         a: "No name is mentioned in the film",
-        b: "Prince Charming",
-        c: "Prince Ferdinand",
-        d: "none of the above"
+        b: "Aurora",
+        c: "Jasmine",
+        d: "Cinderella"
     },
-    correctAnswer: "a"
+    correctAnswer: "b"
 },
 {
     question: "What object is Lumiere in Disney’s, “Beauty and the Beast”?",

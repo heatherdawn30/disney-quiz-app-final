@@ -15,78 +15,18 @@ button {
     margin-bottom: 20px;
 }
 
+.question {
+    box-sizing: border-box;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
 p {
     box-sizing: border-box;
-    background-color: lightgray;
-    color: white;
+    background-color: white;
+    color:black;
     margin-bottom: 20px;
-}
-
-.hidden {
-    
-}
-
-.question-2 {
-    box-sizing: border-box;
-    background-color: lightgray;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.question-3 {
-    box-sizing: border-box;
-    background-color: lightgray;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.question-4 {
-    box-sizing: border-box;
-    background-color: lightgray;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.question-5 {
-    box-sizing: border-box;
-    background-color: lightgray;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.question-6 {
-    box-sizing: border-box;
-    background-color: lightgray;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.question-7 {
-    box-sizing: border-box;
-    background-color: lightgray;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.question-8 {
-    box-sizing: border-box;
-    background-color: lightgray;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.question-9 {
-    box-sizing: border-box;
-    background-color: lightgray;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.question-10 {
-    box-sizing: border-box;
-    background-color: lightgray;
-    color: white;
-    margin-bottom: 20px;
+    display: inline-block;
 }
 
 .end-quiz {
