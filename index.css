@@ -1,11 +1,11 @@
 body {
-    margin: 0, auto;
+    margin-left: 20px;
     font-family: 'Roboto', sans-serif;
-    text-align: center;
 }
 
 button {
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .start-quiz {
@@ -13,12 +13,18 @@ button {
     background-color: lightgray;
     color: white;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .question {
     box-sizing: border-box;
     background-color: white;
     margin-bottom: 20px;
+    text-align: left;
+}
+
+form {
+    text-align: left;
 }
 
 p {
@@ -26,7 +32,10 @@ p {
     background-color: white;
     color:black;
     margin-bottom: 20px;
+    margin-right: 20px;
     display: inline-block;
+    text-align: center;
+    font-weight: bold;
 }
 
 .end-quiz {
@@ -34,4 +43,5 @@ p {
     background-color: lightgray;
     color: white;
     margin-bottom: 20px;
+    text-align: center;
 }
