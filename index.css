@@ -6,6 +6,10 @@ body {
 button {
     margin-top: 10px;
     margin-bottom: 10px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 7px 15px 7px 15px;
 }
 
 .start-quiz {
