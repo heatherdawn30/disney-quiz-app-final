@@ -93,7 +93,7 @@ const myQuestions = [
 {
     question: "Which is the best Disney movie of all time?",
     answers: {
-        a: "That is an opinion, I refuse to answer.",
+        a: "That is an opinion",
         b: "The Little Mermaid",
         c: "Aladdin",
         d: "Robin Hood"
@@ -158,11 +158,11 @@ function questionSubmit() {
 
         if (currentAnswer === correctAnswer) {
             correct++;
-            $(`<p>'You are right!'</p>`).appendTo("#question-form");
+            $(`<p>You are right!</p>`).appendTo("#question-form");
             $("#correct").text("Correct: " + correct);
         } else {
             incorrect++;
-            $("<p> You are wrong, the right answer is " + correctAnswer + "</p>").appendTo("#question-form");
+            $("<p> You are wrong, the right answer is " + correctAnswer + ": " + randomQuestions[questionCounter - 1].answers[correctAnswer] + "</p>").appendTo("#question-form");
             $("#incorrect").text("Incorrect: " + incorrect);
         }
 
@@ -202,13 +202,19 @@ function answerSelected() {
 //and turn the "submit" button text into finish quiz
 function loadQuestion(index) {
     $(`<div class="question">
-        <p>` + randomQuestions[index].question + `</p>
         <form id="question-form">
-            <input class="answer" type="radio" name="options1" value="a"> `+ randomQuestions[index].answers.a +`<br>
-            <input class="answer" type="radio" name="options1" value="b"> `+ randomQuestions[index].answers.b +`<br>
-            <input class="answer" type="radio" name="options1" value="c"> `+ randomQuestions[index].answers.c +`<br>
-            <input class="answer" type="radio" name="options1" value="d"> `+ randomQuestions[index].answers.d +`<br>
-            <button id="submit-button" type="submit">Submit</button>
+            <fieldset>
+                <legend>` + randomQuestions[index].question + `</legend>
+                <input class="answer" type="radio" name="options1" value="a">
+                <label for= "a">`+ randomQuestions[index].answers.a +`</label> <br>
+                <input class="answer" type="radio" name="options1" value="b">
+                <label for= "b">`+ randomQuestions[index].answers.b +`</label> <br>
+                <input class="answer" type="radio" name="options1" value="c">
+                <label for= "c">`+ randomQuestions[index].answers.c +`</label> <br>
+                <input class="answer" type="radio" name="options1" value="d">
+                <label for= "d">`+ randomQuestions[index].answers.d +`</label> <br>
+                <button id="submit-button" type="submit">Submit</button>
+            </fieldset>
         </form>
     </div>`).prependTo("body");
     document.getElementById("submit-button").disabled = true;
