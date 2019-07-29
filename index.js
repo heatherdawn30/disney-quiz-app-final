@@ -8,6 +8,7 @@ const myQuestions = [
         c: "1",
         d: "none of the above"
     },
+    imgFile: "merida_brave_0.jpg" ,
     correctAnswer: "b"
 },
 {
@@ -18,6 +19,7 @@ const myQuestions = [
         c: "Sven",
         d: "none of the above"
     },
+    imgFile: "anna.jpg" ,
     correctAnswer: "b"
 },
 {
@@ -28,6 +30,7 @@ const myQuestions = [
         c: "Fell off a cliff",
         d: "none of the above"
     },
+    imgFile: "tarzan.jpg" ,
     correctAnswer: "a"
 },
 {
@@ -38,6 +41,7 @@ const myQuestions = [
         c: "Aladdin",
         d: "none of the above"
     },
+    imgFile: "guess.jpg" ,
     correctAnswer: "c"
 },
 {
@@ -48,6 +52,7 @@ const myQuestions = [
         c: "Cinderella",
         d: "none of the above"
     },
+    imgFile: "guess.jpg" ,
     correctAnswer: "b"
 },
 {
@@ -58,6 +63,7 @@ const myQuestions = [
         c: "18",
         d: "none of the above"
     },
+    imgFile: "rapunzel.jpg" ,
     correctAnswer: "c"
 },
 {
@@ -68,6 +74,7 @@ const myQuestions = [
         c: "Prince Ferdinand",
         d: "none of the above"
     },
+    imgFile: "prince.jpg" ,
     correctAnswer: "a"
 },
 {
@@ -78,6 +85,7 @@ const myQuestions = [
         c: "Jasmine",
         d: "Cinderella"
     },
+    imgFile: "aurora.jpg" ,
     correctAnswer: "b"
 },
 {
@@ -88,6 +96,7 @@ const myQuestions = [
         c: "Candelabra",
         d: "none of the above"
     },
+    imgFile: "beauty.jpg" ,
     correctAnswer: "c"
 },
 {
@@ -98,6 +107,7 @@ const myQuestions = [
         c: "Aladdin",
         d: "Robin Hood"
     },
+    imgFile: "disney.jpg" ,
     correctAnswer: "a"
 }
 ];
@@ -158,18 +168,18 @@ function questionSubmit() {
 
         if (currentAnswer === correctAnswer) {
             correct++;
-            $(`<p>You are right!</p>`).appendTo("#question-form");
+            $(`<h2>You are right!</h2>`).appendTo("#question-form");
             $("#correct").text("Correct: " + correct);
         } else {
             incorrect++;
-            $("<p> You are wrong, the right answer is " + correctAnswer + ": " + randomQuestions[questionCounter - 1].answers[correctAnswer] + "</p>").appendTo("#question-form");
+            $("<h2> You are wrong, the right answer is " + correctAnswer + ": " + randomQuestions[questionCounter - 1].answers[correctAnswer] + "</h2>").appendTo("#question-form");
             $("#incorrect").text("Incorrect: " + incorrect);
         }
 
         if (questionCounter >= 5) {
             finishQuiz()
         } else {
-            $('<button id="next-question" type="button">Next Question</button>').appendTo("#question-form");
+            $('<br><button id="next-question" type="button">Next Question</button>').appendTo("#question-form");
             $(nextQuestion);
         }
     });
@@ -205,6 +215,7 @@ function loadQuestion(index) {
         <form id="question-form">
             <fieldset>
                 <legend>` + randomQuestions[index].question + `</legend>
+                <img src="` + randomQuestions[index].imgFile + `"></img>
                 <input class="answer" type="radio" name="options1" value="a">
                 <label for= "a">`+ randomQuestions[index].answers.a +`</label> <br>
                 <input class="answer" type="radio" name="options1" value="b">
@@ -229,7 +240,7 @@ function finishQuiz() {
     $(".question").remove();
     $(".counters").remove();
     $(`<div class="finish">
-        <p>Your score is ` + correct + ` out of 5</p>
+        <p>Your score is ` + correct + ` out of 5</p><br>
         <button id="again-button" type="submit">Try Again</button>
     </div>`).prependTo("body");
     $(tryAgain)

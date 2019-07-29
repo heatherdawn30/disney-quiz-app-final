@@ -1,6 +1,16 @@
 body {
     margin-left: 20px;
     font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background-color: lightblue;
+}
+
+@media screen and (max-width: 1000px) {
+    img {
+        height: 80%;
+        width: 80%;
+        font-size: 12px;
+    }
 }
 
 button {
@@ -12,9 +22,17 @@ button {
     padding: 7px 15px 7px 15px;
 }
 
+img {
+    height: 50%;
+    width: 50%;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .start-quiz {
     box-sizing: border-box;
-    background-color: lightgray;
+    background-color: lightblue;
     color: white;
     margin-bottom: 20px;
     text-align: center;
@@ -22,18 +40,20 @@ button {
 
 .question {
     box-sizing: border-box;
-    background-color: white;
+    background-color:white;
     margin-bottom: 20px;
-    text-align: left;
 }
 
 form {
-    text-align: left;
+    text-align: center;
 }
 
+h2 {
+    background-color: white;
+}
 p {
     box-sizing: border-box;
-    background-color: white;
+    background-color:lightblue;
     color:black;
     margin-bottom: 20px;
     margin-right: 20px;
