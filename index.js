@@ -139,7 +139,6 @@ function shuffleArray(array) {
 //render the counters and totals
 $('#start-button').on('click', (event) => {
     randomQuestions = shuffleArray(myQuestions).splice(5,9);
-    console.log(randomQuestions);
     questionCounter = 1;
     incorrect = 0;
     correct = 0;
